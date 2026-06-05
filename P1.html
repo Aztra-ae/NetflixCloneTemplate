@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <title>Reproductor</title>
     <style>
-        body { margin: 0; background: #000; overflow: hidden; }
-        iframe { width: 100vw; height: 100vh; border: none; }
+        body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        video { width: 100%; max-height: 100vh; }
     </style>
 </head>
 <body>
-    <!-- Este es el reproductor oficial de Drive. Si dice "No hay vista previa", dale unos minutos. -->
-    <iframe src="https://drive.google.com/file/d/1JuQk9tnAWzH5OZGNi1f_IBNiM1hjH1Mp/preview" allow="autoplay" allowfullscreen></iframe>
+    <!-- IMPORTANTE: Sustituye TU_ID_AQUI por el ID de tu video -->
+    <video controls autoplay>
+        <source src="https://lh3.googleusercontent.com/d/1JuQk9tnAWzH5OZGNi1f_IBNiM1hjH1Mp" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
 </body>
 </html>
