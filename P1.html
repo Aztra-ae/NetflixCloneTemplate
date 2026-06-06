@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Reproductor</title>
     <style>
-        body { margin: 0; background: #000; overflow: hidden; }
-        iframe { width: 100vw; height: 100vh; border: none; }
+        body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        video { width: 100%; max-height: 100vh; }
     </style>
 </head>
 <body>
-    <iframe src="https://drive.google.com/uc?id=1JuQk9tnAWzH5OZGNi1f_IBNiM1hjH1Mp" allowfullscreen></iframe>
+    <!-- Forzamos el uso del reproductor nativo del navegador -->
+    <video controls autoplay>
+        <source src="https://docs.google.com/uc?export=download&id=1JuQk9tnAWzH5OZGNi1f_IBNiM1hjH1Mp" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
 </body>
 </html>
