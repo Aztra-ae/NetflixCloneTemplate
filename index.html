@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/responsive.css">
-    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
-    <title>Babel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    <title>Babel</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h2 class="logo"><img src="img/Netflix.png" width="200" height="80" alt="Logo Netflix"></h2>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="#">Series</a>
-                <a href="#">Películas</a>
-            </nav>
-        </div>
-    </header>
+    <header>
+        <div class="container">
+            <h2 class="logo"><img src="img/Netflix.png" width="200" height="80" alt="Logo Netflix"></h2>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="#">Series</a>
+                <a href="#">Películas</a>
+            </nav>
+        </div>
+    </header>
 
-    <main>
-        <div class="filme-principal" style="position: relative; width: 100%; height: 60vh; overflow: hidden;">
-            <!-- REPRODUCTOR DE YOUTUBE -->
-            <iframe id="video-trailer" 
-                    src="https://www.youtube.com/embed/JfosfRrRTjU?autoplay=1&mute=1&loop=1&playlist=JfosfRrRTjU" 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;"
-                    frameborder="0" allow="autoplay; encrypted-media; fullscreen">
-            </iframe>
+    <main>
+        <div class="filme-principal" style="position: relative; width: 100%; height: 60vh; overflow: hidden;">
+            <!-- REPRODUCTOR DE YOUTUBE -->
+            <iframe id="video-trailer" 
+                    src="https://www.youtube.com/embed/JfosfRrRTjU?autoplay=1&mute=1&loop=1&playlist=JfosfRrRTjU" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;"
+                    frameborder="0" allow="autoplay; encrypted-media; fullscreen">
+            </iframe>
 
-            <div class="container" style="position: relative; z-index: 1; padding-top: 100px;">
-                <h3 class="titulo" id="titulo-pelicula">La Niebla</h3>
-                <p class="descricao" id="descripcion-pelicula">¡Solo tenemos cuatro balas, Pero somo 5!</p>
-                <div class="botoes">
-                    <a href="P1.html" target="_blank" id="boton-reproducir" role="button" class="botao">
-                        <i class="fas fa-play"></i> VER AHORA
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
+            <div class="container" style="position: relative; z-index: 1; padding-top: 100px;">
+                <h3 class="titulo" id="titulo-pelicula">La Niebla</h3>
+                <p class="descricao" id="descripcion-pelicula">¡Solo tenemos cuatro balas, Pero somo 5!</p>
+                <div class="botoes">
+                    <a href="P1.html" target="_blank" id="boton-reproducir" role="button" class="botao">
+                        <i class="fas fa-play"></i> VER AHORA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
 
-    <div class="carrosel-filmes">
-        <div class="owl-carousel owl-theme">
-            <!-- Recuerda cambiar 'ID_DE_OTRO_VIDEO' por el ID real de YouTube de cada película -->
-            <div class="item"><img class="box-filme" src="img/poster.webp" onclick="cambiarPelicula('La Niebla', '¡Solo tenemos cuatro balas, Pero somo 5!', 'P1.html', 'JfosfRrRTjU')"></div>
-            <div class="item"><img class="box-filme" src="img/mini2.jpg" onclick="cambiarPelicula('STAR WARS', 'Galaxia lejana...', 'P2.html', 'ID_DE_OTRO_VIDEO')"></div>
-            <div class="item"><img class="box-filme" src="img/mini3.jpg" onclick="cambiarPelicula('EL HOBBIT', 'Montaña solitaria.', 'P3.html', 'ID_DE_OTRO_VIDEO')"></div>
-        </div>
-    </div>
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <!-- Recuerda cambiar 'ID_DE_OTRO_VIDEO' por el ID real de YouTube de cada película -->
+            <div class="item"><img class="box-filme" src="img/poster.webp" onclick="cambiarPelicula('La Niebla', '¡Solo tenemos cuatro balas, Pero somo 5!', 'P1.html', 'JfosfRrRTjU')"></div>
+            <div class="item"><img class="box-filme" src="img/mini2.jpg" onclick="cambiarPelicula('STAR WARS', 'Galaxia lejana...', 'P2.html', 'ID_DE_OTRO_VIDEO')"></div>
+            <div class="item"><img class="box-filme" src="img/mini3.jpg" onclick="cambiarPelicula('EL HOBBIT', 'Montaña solitaria.', 'P3.html', 'ID_DE_OTRO_VIDEO')"></div>
+        </div>
+    </div>
 
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="js/owl/jquery.min.js"></script>
-    <script src="js/owl/owl.carousel.min.js"></script>
-    <script src="js/owl/setup.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
 
-    <script>
-        function cambiarPelicula(titulo, desc, enlace, videoId) {
-            document.getElementById('titulo-pelicula').innerText = titulo;
-            document.getElementById('descripcion-pelicula').innerText = desc;
-            document.getElementById('boton-reproducir').href = enlace;
-            
-            const trailer = document.getElementById('video-trailer');
-            trailer.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1&loop=1&playlist=" + videoId;
-        }
-    </script>
+    <script>
+        function cambiarPelicula(titulo, desc, enlace, videoId) {
+            document.getElementById('titulo-pelicula').innerText = titulo;
+            document.getElementById('descripcion-pelicula').innerText = desc;
+            document.getElementById('boton-reproducir').href = enlace;
+            
+            const trailer = document.getElementById('video-trailer');
+            trailer.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&mute=1&loop=1&playlist=" + videoId;
+        }
+    </script>
 </body>
