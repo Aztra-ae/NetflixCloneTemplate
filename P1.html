@@ -5,14 +5,10 @@
     <title>Reproductor</title>
     <style>
         body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
-        video { width: 100%; max-height: 100vh; }
+        iframe { width: 100%; height: 100%; border: none; }
     </style>
 </head>
 <body>
-    <!-- Forzamos el uso del reproductor nativo del navegador -->
-    <video controls autoplay>
-        <source src="https://docs.google.com/uc?export=download&id=1JuQk9tnAWzH5OZGNi1f_IBNiM1hjH1Mp" type="video/mp4">
-        Tu navegador no soporta el video.
-    </video>
+    <iframe src="https://drive.google.com/file/d/1JuQk9tnAWzH5OZGNi1f_IBNiM1hjH1Mp/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
 </body>
 </html>
