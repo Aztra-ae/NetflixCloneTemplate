@@ -1,40 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
-
-    <link rel="stylesheet" href="style/responsive.css">
-
-    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
-
-    <title>Babel</title>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h2 class="logo"><img src="img/Netflix.png" width="180" height="60" alt="Logo Netflix"></h2>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="#">Series</a>
-                <a href="#">Películas</a>
-                <a href="#">Otros</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
+<main>
         <div class="filme-principal">
             <div class="container">
                 <h3 class="titulo" id="titulo-pelicula">Hola, Tu</h3>
                 <p class="descricao" id="descripcion-pelicula">Bienvenido</p>
                 <div class="botoes">
-                   <a href="P1.html" target="_blank" role="button" class="botao">
-    <i class="fas fa-play"></i>
-    VER AHORA
-</a>
+                    <a href="P1.html" target="_blank" id="boton-reproducir" role="button" class="botao">
+                        <i class="fas fa-play"></i>
+                        VER AHORA
+                    </a>
                     <a href="#" role="button" class="botao">
                         <i class="fas fa-info-circle"></i>
                         MÁS INFORMACIÓN
@@ -44,54 +17,24 @@
         </div>
     </main>
 
-    <div class="carrosel-filmes">
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <img class="box-filme" src="img/mini1.jpg" alt="Película 1" onclick="cambiarPelicula('POKÉMON', '¡Atrápalos ya! Mi prueba es, entrenarlos mi ideal...', 'P1.html')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini2.jpg" alt="Película 2" onclick="cambiarPelicula('STAR WARS', 'Hace mucho tiempo en una galaxia muy, muy lejana...', 'P2.html')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini3.jpg" alt="Película 3" onclick="cambiarPelicula('EL HOBBIT', 'Un viaje inesperado hacia la montaña solitaria.', 'P3.html')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini4.jpg" alt="Película 4" onclick="cambiarPelicula('TÍTULO 4', 'Descripción de la película 4 aquí', '#')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini5.jpg" alt="Película 5" onclick="cambiarPelicula('TÍTULO 5', 'Descripción de la película 5 aquí', '#')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini6.jpg" alt="Película 6" onclick="cambiarPelicula('TÍTULO 6', 'Descripción de la película 6 aquí', '#')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini7.jpg" alt="Película 7" onclick="cambiarPelicula('TÍTULO 7', 'Descripción de la película 7 aquí', '#')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini8.jpg" alt="Película 8" onclick="cambiarPelicula('TÍTULO 8', 'Descripción de la película 8 aquí', '#')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini9.jpg" alt="Película 9" onclick="cambiarPelicula('TÍTULO 9', 'Descripción de la película 9 aquí', '#')">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini10.jpg" alt="Película 10" onclick="cambiarPelicula('TÍTULO 10', 'Descripción de la película 10 aquí', '#')">
-            </div>
-        </div>
-    </div>
-
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="js/owl/jquery.min.js"></script>
-    <script src="js/owl/owl.carousel.min.js"></script>
-    <script src="js/owl/setup.js"></script>
-
     <script>
         function cambiarPelicula(nuevoTitulo, nuevaDescripcion, nuevoEnlace) {
+            // Cambia el texto
             document.getElementById('titulo-pelicula').innerText = nuevoTitulo;
             document.getElementById('descripcion-pelicula').innerText = nuevaDescripcion;
-            document.getElementById('boton-reproducir').href = nuevoEnlace;
+            
+            // Cambia el enlace del botón
+            const boton = document.getElementById('boton-reproducir');
+            boton.href = nuevoEnlace;
+            
+            // Si el enlace es '#', quitamos el target="_blank" para que no abra una pestaña vacía
+            if (nuevoEnlace === '#') {
+                boton.removeAttribute('target');
+            } else {
+                boton.setAttribute('target', '_blank');
+            }
+
+            // Sube la pantalla
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
-</body>
-</html>
-```
